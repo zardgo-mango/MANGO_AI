@@ -1,0 +1,10 @@
+Codex CLI 자동 실행 완료
+codex rc: 0
+codex path: C:\Users\LGe\AppData\Roaming\npm\codex.cmd
+node path: C:\Program Files\nodejs\node.exe
+workspace: G:\내 드라이브\MANGO_v24_fix3\workspace\mango_AI_v3_시작
+expected file: 망고계산기.py
+workspace files: auto_loop_game.py, auto_loop_game.pyw, calc_app.py, calc_app.pyw, generated_code.py, generated_code.pyw, mango2_notepad.html, memo 불러오기test.txt, memo 저장test.txt, memo_app.py, memo_app.pyw, notepad_app.py, notepad_app.pyw, 망고2호기.py, 망고2호기_메모.txt, 망고계산기.py, 망고계산기.pyw
+stdout log: G:\내 드라이브\MANGO_v24_fix3\logs\codex_last_stdout.txt
+stderr log: G:\내 드라이브\MANGO_v24_fix3\logs\codex_last_stderr.txt
+retry count: 0

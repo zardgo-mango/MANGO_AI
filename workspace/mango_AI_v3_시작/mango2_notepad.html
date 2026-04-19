@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>망고2호기 메모장</title>
+<link rel="icon" href="./assets/MANGO_1호기.jpg">
+<style>
+  :root {
+    --cream: #fff9ef;
+    --paper: rgba(255, 252, 245, 0.92);
+    --ink: #342515;
+    --muted: #7c6248;
+    --mango: #ffbf2f;
+    --mango-deep: #f39b13;
+    --line: rgba(117, 84, 37, 0.18);
+    --shadow: 0 24px 60px rgba(89, 56, 12, 0.18);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at top left, rgba(255, 205, 84, 0.6), transparent 28%),
+      radial-gradient(circle at right 10% top 20%, rgba(255, 168, 72, 0.28), transparent 25%),
+      linear-gradient(180deg, #fff5d4 0%, #ffe8b0 100%);
+    display: flex;
+    justify-content: center;
+    padding: 28px;
+  }
+
+  .app {
+    width: min(980px, 100%);
+    background: var(--paper);
+    border: 1px solid rgba(120, 84, 33, 0.12);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+  }
+
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 168px 1fr;
+    gap: 22px;
+    padding: 24px 28px;
+    background:
+      linear-gradient(135deg, rgba(255, 200, 42, 0.96), rgba(255, 156, 31, 0.94)),
+      #ffcc4d;
+    border-bottom: 1px solid rgba(120, 84, 33, 0.14);
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(120deg, rgba(255, 255, 255, 0.24), transparent 45%),
+      radial-gradient(circle at right top, rgba(255, 255, 255, 0.24), transparent 28%);
+    pointer-events: none;
+  }
+
+  .hero-image-wrap {
+    position: relative;
+    z-index: 1;
+    align-self: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 22px;
+    border: 4px solid rgba(255, 250, 240, 0.7);
+    box-shadow: 0 16px 36px rgba(85, 48, 6, 0.2);
+    background: rgba(255, 250, 239, 0.85);
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .eyebrow {
+    width: fit-content;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255, 248, 233, 0.7);
+    color: #7a4500;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.08;
+  }
+
+  .subtitle {
+    margin: 0;
+    max-width: 54ch;
+    color: rgba(63, 39, 13, 0.88);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px 24px;
+    background: rgba(255, 247, 229, 0.96);
+    border-bottom: 1px solid var(--line);
+  }
+
+  button,
+  .file-label {
+    border: 0;
+    border-radius: 14px;
+    padding: 12px 16px;
+    font: inherit;
+  }
+
+  button {
+    background: linear-gradient(180deg, #fff9ec, #ffe9bb);
+    color: var(--ink);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(117, 84, 37, 0.08);
+    transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+  }
+
+  button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(117, 84, 37, 0.12);
+    background: linear-gradient(180deg, #fffdf6, #ffe4a0);
+  }
+
+  button.primary {
+    background: linear-gradient(180deg, #ffe172, #ffbb1e);
+  }
+
+  .file-label {
+    margin-left: auto;
+    background: rgba(255, 252, 245, 0.85);
+    color: var(--muted);
+    min-width: 220px;
+  }
+
+  .workspace {
+    padding: 24px;
+  }
+
+  .editor-shell {
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fffdf7;
+    border: 1px solid rgba(132, 92, 36, 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .editor-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+    background: linear-gradient(180deg, rgba(255, 250, 236, 0.95), rgba(255, 244, 214, 0.95));
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 460px;
+    resize: vertical;
+    border: 0;
+    outline: none;
+    padding: 22px;
+    font: 16px/1.7 "Consolas", "D2Coding", monospace;
+    color: #2f2416;
+    background:
+      linear-gradient(transparent 39px, rgba(239, 219, 178, 0.7) 40px);
+    background-size: 100% 40px;
+  }
+
+  .status {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 24px 22px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    body {
+      padding: 14px;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 18px;
+    }
+
+    .hero-image-wrap {
+      max-width: 180px;
+    }
+
+    .toolbar {
+      padding: 14px;
+    }
+
+    .file-label {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .workspace {
+      padding: 14px;
+    }
+
+    textarea {
+      min-height: 360px;
+      padding: 18px;
+    }
+
+    .status,
+    .editor-meta {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="hero-image-wrap">
+        <img class="hero-image" src="./assets/MANGO_1호기.jpg" alt="망고 1호기 그림">
+      </div>
+      <div class="hero-copy">
+        <div class="eyebrow">MANGO 2ND UNIT</div>
+        <h1>망고2호기 메모장</h1>
+        <p class="subtitle">
+          첨부된 망고 이미지를 실제 헤더와 아이콘에 사용한 간단한 로컬 메모장입니다.
+          브라우저에서 바로 열어서 작성하고, 임시 저장하거나 텍스트 파일로 내보낼 수 있습니다.
+        </p>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <button type="button" class="primary" id="saveLocal">임시 저장</button>
+      <button type="button" id="loadLocal">임시 불러오기</button>
+      <button type="button" id="downloadText">TXT 저장</button>
+      <button type="button" id="loadText">TXT 열기</button>
+      <button type="button" id="clearNote">새 메모</button>
+      <div class="file-label" id="fileLabel">현재 파일: 새 메모</div>
+      <input type="file" id="fileInput" accept=".txt,.md,.py,.log,.json,.csv,text/plain">
+    </section>
+
+    <section class="workspace">
+      <div class="editor-shell">
+        <div class="editor-meta">
+          <span id="saveState">저장 대기 중</span>
+          <span id="charCount">0자</span>
+        </div>
+        <textarea id="editor" placeholder="여기에 메모를 입력하세요.&#10;&#10;Ctrl+S로 TXT 저장, 브라우저를 닫기 전에는 임시 저장을 누르면 localStorage에도 저장됩니다."></textarea>
+      </div>
+    </section>
+
+    <footer class="status">
+      <span>이미지 경로: <code>./assets/MANGO_1호기.jpg</code></span>
+      <span id="timeStamp">마지막 작업 없음</span>
+    </footer>
+  </main>
+
+<script>
+  const storageKey = "mango2-notepad-content";
+  const editor = document.getElementById("editor");
+  const charCount = document.getElementById("charCount");
+  const saveState = document.getElementById("saveState");
+  const timeStamp = document.getElementById("timeStamp");
+  const fileLabel = document.getElementById("fileLabel");
+  const fileInput = document.getElementById("fileInput");
+
+  function updateMetrics() {
+    charCount.textContent = `${editor.value.length}자`;
+    saveState.textContent = "편집 중";
+  }
+
+  function setTimestamp(prefix) {
+    const now = new Date();
+    timeStamp.textContent = `${prefix}: ${now.toLocaleString("ko-KR")}`;
+  }
+
+  function saveToLocal() {
+    localStorage.setItem(storageKey, editor.value);
+    saveState.textContent = "브라우저 임시 저장 완료";
+    setTimestamp("임시 저장");
+  }
+
+  function loadFromLocal() {
+    const saved = localStorage.getItem(storageKey);
+    if (saved === null) {
+      alert("임시 저장된 메모가 없습니다.");
+      return;
+    }
+    editor.value = saved;
+    updateMetrics();
+    saveState.textContent = "브라우저 임시 저장 불러옴";
+    setTimestamp("임시 불러오기");
+  }
+
+  function downloadText() {
+    const blob = new Blob([editor.value], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = "망고2호기_메모.txt";
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+    saveState.textContent = "TXT 파일로 저장 완료";
+    setTimestamp("TXT 저장");
+  }
+
+  function clearNote() {
+    if (editor.value && !confirm("현재 메모를 비우고 새로 시작할까요?")) {
+      return;
+    }
+    editor.value = "";
+    fileLabel.textContent = "현재 파일: 새 메모";
+    updateMetrics();
+    saveState.textContent = "새 메모 준비 완료";
+    setTimestamp("새 메모");
+  }
+
+  function openTextFile(file) {
+    const reader = new FileReader();
+    reader.onload = event => {
+      editor.value = String(event.target?.result ?? "");
+      fileLabel.textContent = `현재 파일: ${file.name}`;
+      updateMetrics();
+      saveState.textContent = "파일 불러오기 완료";
+      setTimestamp("TXT 열기");
+    };
+    reader.readAsText(file, "utf-8");
+  }
+
+  document.getElementById("saveLocal").addEventListener("click", saveToLocal);
+  document.getElementById("loadLocal").addEventListener("click", loadFromLocal);
+  document.getElementById("downloadText").addEventListener("click", downloadText);
+  document.getElementById("clearNote").addEventListener("click", clearNote);
+  document.getElementById("loadText").addEventListener("click", () => fileInput.click());
+
+  fileInput.addEventListener("change", event => {
+    const [file] = event.target.files;
+    if (file) {
+      openTextFile(file);
+    }
+    fileInput.value = "";
+  });
+
+  editor.addEventListener("input", updateMetrics);
+
+  window.addEventListener("keydown", event => {
+    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "s") {
+      event.preventDefault();
+      downloadText();
+    }
+  });
+
+  updateMetrics();
+  editor.value = "망고2호기 메모장\n\n- 이 페이지는 작업 폴더에 생성된 실제 파일입니다.\n- 상단 헤더와 브라우저 아이콘에 망고 이미지를 연결했습니다.\n- 필요하면 TXT로 저장해서 별도 파일로 보관할 수 있습니다.";
+  updateMetrics();
+  saveState.textContent = "기본 메모 불러옴";
+  setTimestamp("초기화");
+</script>
+</body>
+</html>

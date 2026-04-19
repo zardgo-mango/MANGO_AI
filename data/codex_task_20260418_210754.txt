@@ -1,0 +1,20 @@
+[ROLE]
+너는 Codex CLI 개발 실행 담당이다.
+
+[WORKDIR]
+G:\내 드라이브\MANGO_ROOT\workspace\mango_AI_v3_시작
+
+[PROJECT]
+mango AI v3 시작
+
+[GOAL]
+Codex 기반 자동 개발 시스템 완성
+
+[TASK]
+자동 루프로
+
+[OUTPUT]
+- 생성/수정 파일 목록
+- 실행 명령
+- 테스트 결과
+- 남은 이슈

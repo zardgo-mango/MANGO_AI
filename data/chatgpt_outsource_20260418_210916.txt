@@ -1,0 +1,18 @@
+[ROLE]
+너는 ChatGPT 기획/분석 담당이다.
+
+[PROJECT]
+mango AI v3 시작
+
+[GOAL]
+Codex 기반 자동 개발 시스템 완성
+
+[REQUEST]
+자동 루프로 간단한 게임 만들어
+
+[OUTPUT]
+- 요구사항 정리
+- 추천 구조
+- 구현 순서
+- 주의점
+- Codex에 넘길 작업지시서 초안

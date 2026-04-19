@@ -1,0 +1,6 @@
+[start] 2026-04-18T21:09:15.945733
+[success] retry=0 files=['auto_loop_game.py', 'calc_app.py', 'generated_code.py', 'memo 불러오기test.txt', 'memo 저장test.txt', 'memo_app.py', 'notepad_app.py']
+[mode] enabled
+[retry 1] expected file missing or rc error
+[success] retry=1 files=['auto_loop_game.py', 'auto_loop_game.pyw', 'calc_app.py', 'calc_app.pyw', 'generated_code.py', 'generated_code.pyw', 'mango2_notepad.html', 'memo 불러오기test.txt', 'memo 저장test.txt', 'memo_app.py', 'memo_app.pyw', 'notepad_app.py', 'notepad_app.pyw', '망고2호기.py']
+[success] retry=0 files=['auto_loop_game.py', 'auto_loop_game.pyw', 'calc_app.py', 'calc_app.pyw', 'generated_code.py', 'generated_code.pyw', 'mango2_notepad.html', 'memo 불러오기test.txt', 'memo 저장test.txt', 'memo_app.py', 'memo_app.pyw', 'notepad_app.py', 'notepad_app.pyw', '망고2호기.py', '망고2호기_메모.txt', '망고계산기.py', '망고계산기.pyw']

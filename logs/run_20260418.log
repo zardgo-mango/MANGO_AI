@@ -1,0 +1,58 @@
+17:26:38 | PROJECT | mango AI v3 시작 | Codex 기반 자동 개발 시스템 완성 | G:\내 드라이브\MANGO_ROOT\workspace\mango_AI_v3_시작
+17:26:59 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_172659.txt
+17:26:59 | CODEX EXEC ERROR | [WinError 2] 지정된 파일을 찾을 수 없습니다
+18:00:20 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_180020.txt
+18:00:20 | CODEX EXEC FAIL | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | rc=1 | stderr='"node"'��(��) ���� �Ǵ� �ܺ� ����, ������ �� �ִ� ���α׷�, �Ǵ�
+��ġ ������ �ƴմϴ�.
+18:15:25 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_181525.txt
+18:15:25 | CODEX EXEC FAIL | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | rc=1 | stderr='"node"'��(��) ���� �Ǵ� �ܺ� ����, ������ �� �ִ� ���α׷�, �Ǵ�
+��ġ ������ �ƴմϴ�.
+18:20:41 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_182041.txt
+18:20:41 | CODEX EXEC FAIL | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | rc=1 | stderr='"node"'��(��) ���� �Ǵ� �ܺ� ����, ������ �� �ִ� ���α׷�, �Ǵ�
+��ġ ������ �ƴմϴ�.
+18:38:18 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_183818.txt
+18:38:41 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0
+19:08:54 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_190853.txt
+19:09:04 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0
+19:15:36 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_191536.txt
+19:15:45 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0
+19:16:39 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_191639.txt
+19:16:48 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0
+19:45:45 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_194545.txt
+19:45:59 | CODEX EXEC FAIL | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | expected=calc_app.py | exists=False
+20:15:55 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_201555.txt
+20:16:41 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | files=['generated_code.py', 'calc_app.py']
+20:34:13 | TASK ENQUEUE | outsource | 파이썬 tkinter 계산기 프로그램 만들어서 calc_app.py로 저장해
+20:34:13 | TASK ENQUEUE | codex | 파이썬 tkinter 계산기 프로그램 만들어서 calc_app.py로 저장해
+20:34:13 | OUTSOURCE PROMPT | G:\내 드라이브\MANGO_ROOT\data\chatgpt_outsource_20260418_203413.txt
+20:34:13 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_203413.txt
+20:35:11 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | files=['calc_app.py', 'generated_code.py']
+20:41:23 | TASK ENQUEUE | outsource | 자동 루프 개발 모드로
+간단한 메모장 프로그램 만들어서 파일 저장 기능까지 구현해
+20:41:23 | TASK ENQUEUE | codex | 자동 루프 개발 모드로
+간단한 메모장 프로그램 만들어서 파일 저장 기능까지 구현해
+20:41:23 | OUTSOURCE PROMPT | G:\내 드라이브\MANGO_ROOT\data\chatgpt_outsource_20260418_204123.txt
+20:41:23 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_204123.txt
+20:42:40 | CODEX EXEC FAIL | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | expected=memo_app.py | exists=False | retry=0
+20:42:40 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_204240.txt
+20:43:37 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | files=['calc_app.py', 'generated_code.py', 'memo_app.py', 'notepad_app.py']
+20:48:30 | TASK ENQUEUE | outsource | 자동 루프로
+ 메모장 프로그램에 파일 불러오기 기능 추가해
+20:48:30 | TASK ENQUEUE | codex | 자동 루프로
+ 메모장 프로그램에 파일 불러오기 기능 추가해
+20:48:30 | OUTSOURCE PROMPT | G:\내 드라이브\MANGO_ROOT\data\chatgpt_outsource_20260418_204830.txt
+20:48:31 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_204831.txt
+20:49:44 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | files=['calc_app.py', 'generated_code.py', 'memo 저장test.txt', 'memo_app.py', 'notepad_app.py']
+21:07:54 | TASK ENQUEUE | outsource | 자동 루프로
+21:07:54 | TASK ENQUEUE | codex | 자동 루프로
+21:07:54 | OUTSOURCE PROMPT | G:\내 드라이브\MANGO_ROOT\data\chatgpt_outsource_20260418_210754.txt
+21:07:54 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_210754.txt
+21:08:12 | CODEX EXEC FAIL | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=3221225786 | expected=None | exists=None | retry=0
+21:08:12 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_210812.txt
+21:08:17 | CODEX EXEC FAIL | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=3221225786 | expected=None | exists=None | retry=1
+21:08:17 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_210817.txt
+21:09:15 | TASK ENQUEUE | outsource | 자동 루프로 간단한 게임 만들어
+21:09:16 | TASK ENQUEUE | codex | 자동 루프로 간단한 게임 만들어
+21:09:16 | OUTSOURCE PROMPT | G:\내 드라이브\MANGO_ROOT\data\chatgpt_outsource_20260418_210916.txt
+21:09:16 | CODEX PROMPT | G:\내 드라이브\MANGO_ROOT\data\codex_task_20260418_210916.txt
+21:11:49 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | files=['auto_loop_game.py', 'calc_app.py', 'generated_code.py', 'memo 불러오기test.txt', 'memo 저장test.txt', 'memo_app.py', 'notepad_app.py']

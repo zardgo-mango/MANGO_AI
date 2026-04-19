@@ -1,0 +1,73 @@
+{
+  "queue": [
+    {
+      "id": "20260418_203412_991835",
+      "type": "outsource",
+      "payload": "파이썬 tkinter 계산기 프로그램 만들어서 calc_app.py로 저장해",
+      "status": "done",
+      "result": "[MANGO] ChatGPT 외주 프롬프트 생성 완료\n\n파일:\nG:\\내 드라이브\\MANGO_ROOT\\data\\chatgpt_outsource_20260418_203413.txt"
+    },
+    {
+      "id": "20260418_203413_045989",
+      "type": "codex",
+      "payload": "파이썬 tkinter 계산기 프로그램 만들어서 calc_app.py로 저장해",
+      "status": "done",
+      "result": "[MANGO] Codex 실행 완료\n\n로그 요약:\nG:\\내 드라이브\\MANGO_ROOT\\logs\\codex_last_summary.txt"
+    },
+    {
+      "id": "20260418_204123_333284",
+      "type": "outsource",
+      "payload": "자동 루프 개발 모드로\n간단한 메모장 프로그램 만들어서 파일 저장 기능까지 구현해",
+      "status": "done",
+      "result": "[MANGO] ChatGPT 외주 프롬프트 생성 완료\n\n파일:\nG:\\내 드라이브\\MANGO_ROOT\\data\\chatgpt_outsource_20260418_204123.txt"
+    },
+    {
+      "id": "20260418_204123_384022",
+      "type": "codex",
+      "payload": "자동 루프 개발 모드로\n간단한 메모장 프로그램 만들어서 파일 저장 기능까지 구현해",
+      "status": "done",
+      "result": "[MANGO] Codex 실행 완료\n\n로그 요약:\nG:\\내 드라이브\\MANGO_ROOT\\logs\\codex_last_summary.txt"
+    },
+    {
+      "id": "20260418_204830_796106",
+      "type": "outsource",
+      "payload": "자동 루프로\n 메모장 프로그램에 파일 불러오기 기능 추가해",
+      "status": "done",
+      "result": "[MANGO] ChatGPT 외주 프롬프트 생성 완료\n\n파일:\nG:\\내 드라이브\\MANGO_ROOT\\data\\chatgpt_outsource_20260418_204830.txt"
+    },
+    {
+      "id": "20260418_204830_836526",
+      "type": "codex",
+      "payload": "자동 루프로\n 메모장 프로그램에 파일 불러오기 기능 추가해",
+      "status": "done",
+      "result": "[MANGO] Codex 실행 완료\n\n로그 요약:\nG:\\내 드라이브\\MANGO_ROOT\\logs\\codex_last_summary.txt"
+    },
+    {
+      "id": "20260418_210754_304424",
+      "type": "outsource",
+      "payload": "자동 루프로",
+      "status": "done",
+      "result": "[MANGO] ChatGPT 외주 프롬프트 생성 완료\n\n파일:\nG:\\내 드라이브\\MANGO_ROOT\\data\\chatgpt_outsource_20260418_210754.txt"
+    },
+    {
+      "id": "20260418_210754_353291",
+      "type": "codex",
+      "payload": "자동 루프로",
+      "status": "running"
+    },
+    {
+      "id": "20260418_210915_975007",
+      "type": "outsource",
+      "payload": "자동 루프로 간단한 게임 만들어",
+      "status": "done",
+      "result": "[MANGO] ChatGPT 외주 프롬프트 생성 완료\n\n파일:\nG:\\내 드라이브\\MANGO_ROOT\\data\\chatgpt_outsource_20260418_210916.txt"
+    },
+    {
+      "id": "20260418_210916_015683",
+      "type": "codex",
+      "payload": "자동 루프로 간단한 게임 만들어",
+      "status": "done",
+      "result": "[MANGO] Codex 실행 완료\n\n로그 요약:\nG:\\내 드라이브\\MANGO_ROOT\\logs\\codex_last_summary.txt"
+    }
+  ]
+}

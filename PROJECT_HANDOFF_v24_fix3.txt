@@ -1,0 +1,20 @@
+[MANGO 프로젝트 인계 기준]
+
+기준 버전:
+- v24_fix3
+
+반드시 유지:
+- 현재 실행 폴더 기준 workspace/logs/data/assets 사용
+- GUI 결과물은 .pyw 실행 기준
+- 첨부파일은 workdir/assets로 복사 후 실제 UI 반영 강제
+- 메인 UI 캐릭터는 assets/mango_avatar.png 사용
+
+이번 버전 핵심:
+- 첨부 이미지가 실제 결과물 코드에 반영되는지 검증
+- 미반영 시 실패 처리 및 재시도
+- 경로 혼선 제거
+
+재발 금지:
+- 구버전 MANGO_ROOT 경로에 생성 금지
+- run_*_silent.pyw 남발 금지
+- 첨부 이미지를 무시한 결과물 성공 처리 금지

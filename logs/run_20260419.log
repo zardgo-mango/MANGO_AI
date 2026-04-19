@@ -1,0 +1,6 @@
+00:19:49 | CODEX PROMPT | G:\내 드라이브\MANGO_v24_fix3\data\codex_task_20260419_001949.txt
+00:22:13 | CODEX EXEC FAIL | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | expected=망고2호기.py | exists=False | retry=0
+00:22:13 | CODEX PROMPT | G:\내 드라이브\MANGO_v24_fix3\data\codex_task_20260419_002213.txt
+00:25:17 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | files=['auto_loop_game.py', 'auto_loop_game.pyw', 'calc_app.py', 'calc_app.pyw', 'generated_code.py', 'generated_code.pyw', 'mango2_notepad.html', 'memo 불러오기test.txt', 'memo 저장test.txt', 'memo_app.py', 'memo_app.pyw', 'notepad_app.py', 'notepad_app.pyw', '망고2호기.py']
+00:37:08 | CODEX PROMPT | G:\내 드라이브\MANGO_v24_fix3\data\codex_task_20260419_003708.txt
+00:38:37 | CODEX EXEC OK | path=C:\Users\LGe\AppData\Roaming\npm\codex.cmd | node=C:\Program Files\nodejs\node.exe | rc=0 | files=['auto_loop_game.py', 'auto_loop_game.pyw', 'calc_app.py', 'calc_app.pyw', 'generated_code.py', 'generated_code.pyw', 'mango2_notepad.html', 'memo 불러오기test.txt', 'memo 저장test.txt', 'memo_app.py', 'memo_app.pyw', 'notepad_app.py', 'notepad_app.pyw', '망고2호기.py', '망고2호기_메모.txt', '망고계산기.py', '망고계산기.pyw']
